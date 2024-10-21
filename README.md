@@ -157,6 +157,11 @@ setar a propriedade do mailer para "false".
 - Comando para baixar a imagem docker local, essa imagem possui o serviço do MailHog:
 "docker run -d -p 8025:8025 -p 1025:1025 mailhog/mailhog"
 
+
+No browser, use a url abaixo para visualizar a interface do servidor de email do MailHog:
+http://localhost:8025
+
+
 curl do endpoint:
 curl --location 'localhost:8080/email-me-a-poem?topiPoem=Corinthians%2C%20vida%2C%20amor%2C%20eterno%2C%20Doutor%2C%20sa%C3%BAde.%20c%C3%A9u&qtdLine=10'
 
