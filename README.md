@@ -144,17 +144,18 @@ Configurado uma ferramenta das extensões Quarkus para indicar ao prompt como el
 sabe enviar o mailer que é o seviço que emula o envio de email pelo Quarkus. 
 
 Para rodar:
-Se você teve sucesso em configurar sua chave de projeto openIa, basta o projeto estar em execução e chamar o endpoint 
-indicado (Ajuste o texto para sua preferência e a quantidade de linhas).
+Se você teve sucesso em configurar sua chave de projeto openIA, se o projeto estiver em execução e após chamar o endpoint 
+indicado acima (Ajuste o texto para sua preferência e a quantidade de linhas).
 Para indicar se quer tradução em outro idioma, ajuste no metodo "writeAPoem()".
-A classe PoemAIService, foi desabilitada pois ela só tinha a função de gerar o poema, com a atualização da feature, a api
+A classe PoemAIService, foi desabilitada pois ela só tinha a função de gerar um poema, com uma atualização, o prompt 
 gera o poema e envia por email.
-- Detalhe importante, para visualizar o email, nesse projeto há 2 maneiras, via mailer, uma simulação é registrada no 
-console log da IDE, configure a anotação no propeties para "true" ou com o MailHog que tem interface gráfica para receber
-os e-mails simulados, lembre de configurar a img no docker e setar o atributo de config do mailer para "false".
+- Detalhe importante: para visualização do e-mail, nesse projeto há 2 maneiras, via mailer, uma simulação é registrada no 
+console log da IDE, antes, configure a propriedade do mailer no seu .propeties para "true" e depois execute o software 
+ou com o MailHog que tem interface gráfica para receber os e-mails simulados, lembre de configurar a imagem do docker e 
+setar a propriedade do mailer para "false".
 
-- Comando para baixar a imagem docker local, na instalação do MailHog
-docker run -d -p 8025:8025 -p 1025:1025 mailhog/mailhog
+- Comando para baixar a imagem docker local, essa imagem possui o serviço do MailHog:
+"docker run -d -p 8025:8025 -p 1025:1025 mailhog/mailhog"
 
 curl do endpoint:
 curl --location 'localhost:8080/email-me-a-poem?topiPoem=Corinthians%2C%20vida%2C%20amor%2C%20eterno%2C%20Doutor%2C%20sa%C3%BAde.%20c%C3%A9u&qtdLine=10'
